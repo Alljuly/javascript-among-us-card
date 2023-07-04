@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;1,400&display=swap');
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    font-family: 'Kanit';
+}
+
+span{
+    color: #925391;
+    text-transform: uppercase;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    font: normal 15 pt Arial;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+h1{
+    display: flex;
+    margin: 1rem 0.2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+div, .close {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 8px;
+    margin: 1rem;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: min-content;
+}
+
+.card{
+    position: absolute;
+    width:content;
+    padding:0;
+    position:absolute;
+    background:rgb(255, 255, 255);
+    background-position:-1100px -200px;
+    border-radius: 15px;
+    color: black;
+    visibility: hidden;
+}
+
+h2, .top, .middle, .image, .identify{
+    margin:0;
+    padding: 0.3rem 1rem;
+}
+
+#nametop{
+    margin: auto 0;
+    border: #000000 solid 2px;
+    border-radius: 10px;
+    padding: 0.3rem;
+    width: max-content;
+    height: max-content;
+    justify-content: end;
+}
+
+.middle, .top{
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.top{
+    margin: 0.3rem 1rem;
+    font-family: 'Chakra Petch';
+}
+
+#namecard{
+    margin: 0;
+}
+
+.datacard{
+    justify-content: center;
+    align-items: start;
+    height: max-content;
+
+}
+
+.image{
+    height: 200px;
+    width: min-content;
+    border: solid black 10px;
+    border-radius: 10px;
+    justify-content: end;
+    align-items: start;
+    padding: 0;
+    padding-left: 0.3rem;
+    background-color: rgb(255, 255, 255);
+}
+
+#card{
+    visibility: hidden;
+    background-image: url(/assets/bkcard.png);
+    background-position: center;
+}
+
+.content-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+}
+
+#nametop{
+    color: red;
+    font-weight: bold;
+}
+
+.btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-height: min-content;
+    margin: 0;
+}
+
+#formbtn{
+    visibility: hidden;
+}
+
+label{
+    height: max-content;
+    margin: 0.5rem;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: #1f041f;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+input {
+    width: 80%;
+    min-width: min-content;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid blueviolet;
+    height: max-content;
+}
+
+.dataname{
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataname>label{
+    width: 100%;
+}
+
+.dataname>label>input{
+    margin-left: 2rem;
+}
+
+.datadate{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    position: initial;
+}
+
+.buttonform{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+}
+
+
+#res{
+    margin: 0;
+    text-align: center;
+}
+
+.btn{
+    padding: 0.7rem;
+    color: white;
+    background-color: #3e1555;
+    border: none;
+    min-width: 40vh;
+}
+
+
+.btn:hover{
+background-color: #603578;
+
+}
+#btnform{
+    margin: 0;
+}

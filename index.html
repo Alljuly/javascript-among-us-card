@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            Entre no
+        </h1>
+        <h1><span>jogo</span></h1>
+    </header>
+    <section>
+        <form>
+            <div id="content-form" class="content">
+                <div class="dataname">
+                    <label>Nome:
+                        <input type="text" name="name" id="name"  placeholder="Primeiro nome" required>
+                    </label>
+                </div>    
+                <div class="datadate">
+                    <label>Ano de nascimento:
+                        <input type="number" name="date" id="date" min="0" placeholder="Ex: 2005" required></label>
+                    <label>Peso:
+                        <input type="number" name="peso" id="weight" placeholder="Ex.: 65">
+                    </label>
+                    <label>Altura:
+                        <input type="number" name="altura" id="height" placeholder="Ex:. 1.76" required>
+                    </label> 
+                    <label>Tipo sanguineo:
+                        <input type="text" name="blood" id="blood" placeholder="Ex.: O-" required>
+                    </label>        
+                </div>    
+                    
+                </div>
+                
+                </div>      
+                </div>
+        </form>
+
+        <div class="btns">
+            <div id="res">
+                Esperando por dados...
+            </div>
+                <div class="buttonform">
+                    <input class="btn" id="button" type="button" value="Verificar" onclick="verificar()">
+                    <input class="btn" id="cardbtn" type="button" value="Gerar identificação" onclick="show()">
+                </div>
+            
+                 <input class="btn" id="formbtn" type="button" value="Voltar para o formulário"onclick="hide()">
+            </div>           
+    </section>
+
+    <div id="card" class="card" background-image="/assets/bkcard.png">
+
+        <div class="top">
+            
+            <h2>
+                Access Card
+            </h2>
+            <div class="top" id="nametop">
+                Nome
+            </div>
+        </div>
+        <div class="middle">
+            <div class="identify">
+                <div class="image">
+                    <img class="among" id="cardimage" src="./assets/among1.jpg" height="150">
+                </div>
+                <div id="namecard"> </div>
+            </div>
+            <div class="datacard">
+                <label id="heightcard">Altura - </label>
+                <label id="weightcard">Peso - </label>
+                <label id="bloodcard">Tipo sanguineo - </label>
+                <label id="job">Função - Tripulante</label>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <a href="https://github.com/Alljuly">Alljuly</a></p>
+    </footer>
+    <script src="script.js"> </script>
+
+</body>
+
+</html>
