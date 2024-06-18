@@ -1,6 +1,12 @@
 # Crie sua carteirinha de tripulante para embarcar
+## Projeto feito para ser avaliado na matéria de introdução às tecnologias de desenvolvimento WEB do Curso de Sistemas de informação
 
-## O primeiro passo para refatorar o código será trocar coisas como isso: 
+### Meu processo refazendo o projeto
+- Inicialmente todo o codigo foi feio com um arquivo html, js e algumas imagens. e estava com a seguinte aparência:
+
+![image](https://github.com/Alljuly/javascript-amongus-card-generator/assets/86618692/6ba5b2b3-37d1-4ce7-8cd5-a636f7561879)
+
+- O primeiro passo para refatorar o código será trocar coisas como isso: 
 
 ```html
 <div id="content-form" class="content">
@@ -17,15 +23,16 @@
             </label>
           </div>
 ```
-### por componetes feitos com javascript
 
-### O que vai deixar nosso código mais ou menos assim
+- por componentes feitos com javascript. O que vai deixar nosso código mais ou menos assim
 
 ```html
   <formComponent>
       <inputComponent type="Name">
     </formComponent>
 ```
-
-## Depois será necessário reimplementar a lógica para funcionar com os components
+- Obviamente, esse tipo de implentação deixa o projeto com uma complexidade desnecessária, que poderia facilmente ser resolvida frameworks como Angular, ou o próprio React.
+- A única motivação para manter o javascript nesse caso é revisar js, conceitos de shadow DOM, e CSS.
+- no meu [repositório de angular](https://github.com/Alljuly/angular-desenvolvimento-frontend/tree/main/Fundamentos%20Angular/Web%20Components) voce pode encontrar outro projeto onde eu usei esse tipo de componentização
+### Depois será necessário reimplementar a lógica para funcionar com novos componentes
 
