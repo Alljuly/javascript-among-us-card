@@ -1,54 +1,3 @@
-/*
-Atributos que esse componente recebe:
- type, name, id, placeholder, className
-*/
-
-/** Corrigir desgin do form
- * 
-          <div class="datadate">
-            <label
-              >Ano de nascimento:
-              <input
-                type="number"
-                name="date"
-                id="date"
-                min="0"
-                placeholder="Ex: 2005"
-                required
-            /></label>
-            <label
-              >Peso:
-              <input
-                type="number"
-                name="peso"
-                id="weight"
-                placeholder="Ex.: 65"
-              />
-            </label>
-            <label>
-              Altura:
-              <input
-                type="number"
-                name="altura"
-                id="height"
-                placeholder="Ex:. 1.76"
-                required
-              />
-            </label>
-            <label
-              >Tipo sanguineo:
-              <input
-                type="text"
-                name="blood"
-                id="blood"
-                placeholder="Ex.: O-"
-                required
-              />
-            </label>
-          </div>
- * 
- */
-
 class Fildset extends HTMLElement{
    
     constructor(){
@@ -89,8 +38,8 @@ class Fildset extends HTMLElement{
         input.setAttribute("required", "")
       };
 
-      label.appendChild(input)
       componentRoot.appendChild(label)
+      componentRoot.appendChild(input)
 
       return componentRoot
     }
