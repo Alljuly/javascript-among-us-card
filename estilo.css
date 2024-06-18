@@ -9,10 +9,7 @@ html{
     font-family: 'Kanit';
 }
 
-span{
-    color: #925391;
-    text-transform: uppercase;
-}
+
 
 body {
     display: flex;
@@ -23,19 +20,7 @@ body {
     font: normal 15 pt Arial;
 }
 
-header{
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-}
 
-h1{
-    display: flex;
-    margin: 1rem 0.2rem;
-    height: 2rem;
-    align-items: center;
-    justify-content: center;
-}
 
 div, .close {
     display: flex;
