@@ -10,66 +10,20 @@
   </head>
 
   <body>
-    <header>
-      <h1>Entre no</h1>
-      <h1><span>jogo</span></h1>
-    </header>
+    <header-component title="Entre no" span="jogo">  
+    </header-component>
     <section>
       <form>
         <div id="content-form" class="content">
-          <div class="dataname">
-            <label
-              >Nome:
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Primeiro nome"
-                required
-              />
-            </label>
-          </div>
-          <div class="datadate">
-            <label
-              >Ano de nascimento:
-              <input
-                type="number"
-                name="date"
-                id="date"
-                min="0"
-                placeholder="Ex: 2005"
-                required
-            /></label>
-            <label
-              >Peso:
-              <input
-                type="number"
-                name="peso"
-                id="weight"
-                placeholder="Ex.: 65"
-              />
-            </label>
-            <label>
-              Altura:
-              <input
-                type="number"
-                name="altura"
-                id="height"
-                placeholder="Ex:. 1.76"
-                required
-              />
-            </label>
-            <label
-              >Tipo sanguineo:
-              <input
-                type="text"
-                name="blood"
-                id="blood"
-                placeholder="Ex.: O-"
-                required
-              />
-            </label>
-          </div>
+          <custom-fieldset 
+            className="dataname" 
+            id="name" 
+            name="name" 
+            placeholder="First Name" 
+            require="True"> 
+          </custom-fieldset>
+
+        
         </div>
       </form>
 
@@ -127,7 +81,8 @@
         </div>
       </div>
     </div>
-
+    <customFooter href="https://github.com/Alljuly" content="Alljuly"></customFooter>
+    <script src="footer-component.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

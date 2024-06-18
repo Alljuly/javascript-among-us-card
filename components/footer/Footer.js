@@ -1,7 +1,3 @@
-<footer>
-<p>&copy; <a href="https://github.com/Alljuly">Alljuly</a></p>
-</footer>
-
 class Footer extends HTMLElement{
     constructor(){
         super();
@@ -20,10 +16,29 @@ class Footer extends HTMLElement{
     }
 
     loadStyles(shadow){
-        const linkElem = document.createElement("header");
+        const linkElem = document.createElement("footer");
         linkElem.setAttribute("rel", "stylesheet");
         linkElem.setAttribute("href", "./footer-module.css");
         shadow.appendChild(linkElem);
     }
+    
+    buildComponent(){
+        const componentRoot = document.createElement("footer")
+        const p = document.createElement("p")
+        const a = document.createElement("a")
+
+        a.setAttribute("href", this.getAttribute("href"))
+        a.textContent = this.getAttribute("content")
+
+        p.innerHTML = '&copy' 
+       
+        p.appendChild(a)
+
+        componentRoot.appendChild(p)
+
+        return componentRoot
+    }
 
 }
+
+customElements.define("CustomFooter", Footer)

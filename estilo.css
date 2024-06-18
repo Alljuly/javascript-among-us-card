@@ -165,27 +165,7 @@ input {
     height: max-content;
 }
 
-.dataname{
-    margin-bottom: 0;
-    justify-content: center;
-    align-items: center;
-}
 
-.dataname>label{
-    width: 100%;
-}
-
-.dataname>label>input{
-    margin-left: 2rem;
-}
-
-.datadate{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
 
 .button{
     display: flex;
