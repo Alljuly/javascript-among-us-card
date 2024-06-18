@@ -6,6 +6,13 @@
 
 ![image](https://github.com/Alljuly/javascript-amongus-card-generator/assets/86618692/6ba5b2b3-37d1-4ce7-8cd5-a636f7561879)
 
+- Aparência esperada ao final do projeto :
+  
+![image](https://github.com/Alljuly/javascript-amongus-card-generator/assets/86618692/88214b6c-d64f-4720-a896-3b9ba65b979a)
+
+
+
+
 - O primeiro passo para refatorar o código será trocar coisas como isso: 
 
 ```html
