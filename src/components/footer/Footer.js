@@ -1,44 +1,39 @@
-class Footer extends HTMLElement{
-    constructor(){
-        super();
+class Footer extends HTMLElement {
+	constructor() {
+		super();
 
-        const shadow = this.attachShadow({ mode: "open" });
+		const shadow = this.attachShadow({ mode: "open" });
 
-        var build = this.buildComponent();
-
-		var style = this.loadStyles();
-
+		var build = this.buildComponent();
 		shadow.appendChild(build);
 
+		var style = this.loadStyles();
 		shadow.appendChild(style);
-        this.loadStyles(shadow)
+	}
 
-    }
+	loadStyles() {
+		const linkElem = document.createElement("link");
+		linkElem.setAttribute("rel", "stylesheet");
+		linkElem.setAttribute("href", "./footer-module.css");
+		return linkElem;
+	}
 
-    loadStyles(shadow){
-        const linkElem = document.createElement("footer");
-        linkElem.setAttribute("rel", "stylesheet");
-        linkElem.setAttribute("href", "./footer-module.css");
-        shadow.appendChild(linkElem);
-    }
-    
-    buildComponent(){
-        const componentRoot = document.createElement("footer")
-        const p = document.createElement("p")
-        const a = document.createElement("a")
+	buildComponent() {
+		const componentRoot = document.createElement("footer");
+		const p = document.createElement("p");
+		const a = document.createElement("a");
 
-        a.setAttribute("href", this.getAttribute("href"))
-        a.textContent = this.getAttribute("content")
+		a.setAttribute("href", this.getAttribute("href"));
+		a.textContent = this.getAttribute("content");
 
-        p.innerHTML = '&copy' 
-       
-        p.appendChild(a)
+		p.innerHTML = "&copy: ";
 
-        componentRoot.appendChild(p)
+		p.appendChild(a);
 
-        return componentRoot
-    }
+		componentRoot.appendChild(p);
 
+		return componentRoot;
+	}
 }
 
-customElements.define("CustomFooter", Footer)
+customElements.define("custom-footer", Footer);

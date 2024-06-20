@@ -12,15 +12,14 @@ class Header extends HTMLElement{
 		shadow.appendChild(build);
 
 		shadow.appendChild(style);
-        this.loadStyles(shadow)
 
     }
 
-    loadStyles(shadow){
-        const linkElem = document.createElement("header");
+    loadStyles(){
+        const linkElem = document.createElement("link");
         linkElem.setAttribute("rel", "stylesheet");
         linkElem.setAttribute("href", "./header-module.css");
-        shadow.appendChild(linkElem);
+        return linkElem
     }
 
     buildComponent(){

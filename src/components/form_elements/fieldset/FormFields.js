@@ -1,48 +1,48 @@
-class Fildset extends HTMLElement{
-   
-    constructor(){
-      super()
+class Fildset extends HTMLElement {
+	constructor() {
+		super();
 
-      const shadow =  this.attachShadow({ mode: "open" });
-      var build = this.buildComponent();
-      var style = this.loadStyles();
-		  shadow.appendChild(build);
-		  shadow.appendChild(style);
-      this.loadStyles(shadow)
+		const shadow = this.attachShadow({ mode: "open" });
+		var build = this.buildComponent();
+		var style = this.loadStyles();
+		shadow.appendChild(build);
+		shadow.appendChild(style);
+	}
 
-    }
+	loadStyles() {
+		const linkElem = document.createElement("link");
+		linkElem.setAttribute("rel", "stylesheet");
+		linkElem.setAttribute("href", "./Fieldset-module.css");
+		return linkElem;
+	}
 
-    loadStyles(shadow){
-      const linkElem = document.createElement("footer");
-      linkElem.setAttribute("rel", "stylesheet");
-      linkElem.setAttribute("href", "./Fieldset-module.css");
-      shadow.appendChild(linkElem);
-    }
+	buildComponent() {
+		const componentRoot = document.createElement("div");
+		componentRoot.classList.add(this.getAttribute("className"));
 
-    buildComponent(){
-      const componentRoot = document.createElement("div")
-      componentRoot.classList.add(this.getAttribute("className"))
+		const label = document.createElement("label");
+		label.textContent = this.getAttribute("label-content" || "text content");
 
-      const label = document.createElement("label")
-      label.textContent = this.getAttribute("label-content" || "text content")
+		const input = document.createElement("input");
+		input.setAttribute("id", this.getAttribute("id") || " ");
+		input.setAttribute("type", this.getAttribute("type") || "text");
+		input.setAttribute(
+			"placeholder",
+			this.getAttribute("placeholder") || "placeholder"
+		);
+		input.setAttribute("name", "label-content" || "Name");
 
-      const input = document.createElement("input")
-      input.setAttribute("id", this.getAttribute("id") || ' ')
-      input.setAttribute("type", this.getAttribute("type") || "text")
-      input.setAttribute("placeholder", this.getAttribute("placeholder") || "placeholder")
-      input.setAttribute("name", "label-content" || "Name")
+		const isRequired = this.getAttribute("require") !== null;
 
-      const isRequired = this.getAttribute("require") !== null
+		if (isRequired) {
+			input.setAttribute("required", "");
+		}
 
-      if (isRequired) { 
-        input.setAttribute("required", "")
-      };
+		componentRoot.appendChild(label);
+		componentRoot.appendChild(input);
 
-      componentRoot.appendChild(label)
-      componentRoot.appendChild(input)
+		return componentRoot;
+	}
+}
 
-      return componentRoot
-    }
-} 
-
-customElements.define('custom-fieldset', Fildset)
+customElements.define("custom-fieldset", Fildset);

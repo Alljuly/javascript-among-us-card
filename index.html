@@ -1,122 +1,131 @@
 <!DOCTYPE html>
 <html lang="br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
 
-    <link rel="stylesheet" href="estilo.css" />
-  </head>
+		<link rel="stylesheet" href="global.css" />
+	</head>
 
-  <body>
-    <header-component title="Entre no" span="jogo">  
-    </header-component>
-    <section>
-      <form>
-        <div id="content-form" class="content">
-          <custom-fieldset 
-            className="form_fielset" 
-            id="name" 
-            name="name" 
-            placeholder="Chuck" 
-            type="text"
-            require="True"> 
-          </custom-fieldset>
+	<body>
+		<header-component title="Entre no " spanTitle="jogo"></header-component>
+		<section>
+			<form>
+				<div id="content-form" class="content">
+					<custom-fieldset
+						className="form_fielset"
+						id="name"
+						name="name"
+						placeholder="Chuck"
+						type="text"
+						require="True"
+					>
+					</custom-fieldset>
 
-          <custom-fieldset 
-            className="form_fielset" 
-            id="height" 
-            name="height"
-            placeholder="1.76" 
-            type="number"
-            require="True"> 
-          </custom-fieldset>
+					<custom-fieldset
+						className="form_fielset"
+						id="height"
+						name="height"
+						placeholder="1.76"
+						type="number"
+						require="True"
+					>
+					</custom-fieldset>
 
-          <custom-fieldset 
-            className="form_fielset" 
-            id="blood" 
-            name="blood" 
-            type="text"
-            placeholder="O+" 
-            require="True"> 
-          </custom-fieldset>
+					<custom-fieldset
+						className="form_fielset"
+						id="blood"
+						name="blood"
+						type="text"
+						placeholder="O+"
+						require="True"
+					>
+					</custom-fieldset>
 
-          <custom-fieldset 
-            className="form_fielset" 
-            id="weigth" 
-            name="weigth" 
-            placeholder="64.8" 
-            require="True"> 
-          </custom-fieldset>
+					<custom-fieldset
+						className="form_fielset"
+						id="weigth"
+						name="weigth"
+						placeholder="64.8"
+						require="True"
+					>
+					</custom-fieldset>
 
-          <custom-fieldset 
-            className="form_fielset" 
-            id="birthday" 
-            name="birthday" 
-            placeholder="1998" 
-            require="True"> 
-          </custom-fieldset>          
+					<custom-fieldset
+						className="form_fielset"
+						id="birthday"
+						name="birthday"
+						placeholder="1998"
+						require="True"
+					>
+					</custom-fieldset>
+				</div>
+			</form>
 
-        </div>
-      </form>
+			<div class="btns">
+				<div id="res">Esperando por dados...</div>
+				<div class="buttonform">
+					<input
+						class="btn"
+						id="button"
+						type="button"
+						value="Verificar"
+						onclick="verificar()"
+					/>
+					<input
+						class="btn"
+						id="cardbtn"
+						type="button"
+						value="Gerar identificação"
+						onclick="changeVisible()"
+					/>
+				</div>
 
-      <div class="btns">
-        <div id="res">Esperando por dados...</div>
-        <div class="buttonform">
-          <input
-            class="btn"
-            id="button"
-            type="button"
-            value="Verificar"
-            onclick="verificar()"
-          />
-          <input
-            class="btn"
-            id="cardbtn"
-            type="button"
-            value="Gerar identificação"
-            onclick="changeVisible()"
-          />
-        </div>
+				<input
+					class="btn"
+					id="formbtn"
+					type="button"
+					value="Voltar para o formulário"
+					onclick="changeHidden()"
+				/>
+			</div>
+		</section>
 
-        <input
-          class="btn"
-          id="formbtn"
-          type="button"
-          value="Voltar para o formulário"
-          onclick="changeHidden()"
-        />
-      </div>
-    </section>
-
-    <div id="card" class="card" background-image="/assets/bkcard.png">
-      <div class="top">
-        <h2>Access Card</h2>
-        <div class="top" id="nametop">Nome</div>
-      </div>
-      <div class="middle">
-        <div class="identify">
-          <div class="image">
-            <img
-              class="among"
-              id="cardimage"
-              src="./assets/among1.jpg"
-              height="150"
-            />
-          </div>
-          <div id="namecard"></div>
-        </div>
-        <div class="datacard">
-          <label id="heightcard">Altura - </label>
-          <label id="weightcard">Peso - </label>
-          <label id="bloodcard">Tipo sanguineo - </label>
-          <label id="job">Função - Tripulante</label>
-        </div>
-      </div>
-    </div>
-    <customFooter href="https://github.com/Alljuly" content="Alljuly"></customFooter>
-    <script src="footer-component.js"></script>
-    <script src="script.js"></script>
-  </body>
+		<div id="card" class="card" background-image="/assets/bkcard.png">
+			<div class="top">
+				<h2>Access Card</h2>
+				<div class="top" id="nametop">Nome</div>
+			</div>
+			<div class="middle">
+				<div class="identify">
+					<div class="image">
+						<img
+							alt=""
+							class="among"
+							id="cardimage"
+							src="./assets/among1.jpg"
+							height="150"
+						/>
+					</div>
+					<div id="namecard"></div>
+				</div>
+				<div class="datacard">
+					<label id="heightcard">Altura - </label>
+					<label id="weightcard">Peso - </label>
+					<label id="bloodcard">Tipo sanguineo - </label>
+					<label id="job">Função - Tripulante</label>
+				</div>
+			</div>
+		</div>
+		<custom-footer
+			href="https://github.com/Alljuly"
+			content="Alljuly"
+		></custom-footer>
+		<script src="./src/components/header/Header.js"></script>
+		<script src="./src/components/form_elements/fieldset/FormFields.js"></script>
+		<script src="./src/components/footer/Footer.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>
