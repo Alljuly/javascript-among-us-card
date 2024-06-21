@@ -16,3 +16,7 @@ span{
     color: #925391;
     text-transform: uppercase;
 }
+
+.fontSize {
+    font-size: 1rem
+}

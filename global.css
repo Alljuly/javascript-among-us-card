@@ -1,23 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;1,400&display=swap");
 
-html {
+
+* {
 	margin: 0;
 	padding: 0;
-	height: 100%;
-	color: white;
-	font-family: "Kanit";
+	box-sizing: border-box;
+}
+html{
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
 }
 
-body {
+
+body{
+	margin: 0;
+	color: white;
+	font-family: "Kanit";
 	display: flex;
+	min-height: 100vh;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	background: #2D2C30;
 	background-image: url("./src/assets/stars.svg");
 	background-size: cover;
+
 }
+
+form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: min-content;
+}
+
 /**
 
 div,
@@ -29,12 +48,12 @@ div,
 	margin: 1rem;
 }
 
-form {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-width: min-content;
-}
+ {
+
+
+
+
+
 
 .card {
 	position: absolute;

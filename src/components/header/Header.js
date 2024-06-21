@@ -27,10 +27,14 @@ class Header extends HTMLElement{
         const title = document.createElement("h1")
         const span = document.createElement("span")
 
+        //Colocar atributo para mudar tamanho da fonte
         title.textContent = this.getAttribute("title")
-        span.textContent = this.getAttribute("spanTitle")
+        span.textContent = this.getAttribute("spanTitle" || " ")
         
-        title.appendChild(span)
+        if(span.textContent){
+            title.appendChild(span)
+        }
+        
         componentRoot.appendChild(title)
 
 

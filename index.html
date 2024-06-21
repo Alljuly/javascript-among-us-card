@@ -10,7 +10,11 @@
 	</head>
 
 	<body>
-		<header-component title="Entre no " spanTitle="jogo"></header-component>
+		<div>
+		<header-component title="Among Us" fontSize="1"></header-component>
+		<header-component title="Entre no " spanTitle="jogo" fontSize="2"></header-component>
+		</div>
+
 		<section>
 			<form>
 				<div id="content-form" class="content">
@@ -61,19 +65,20 @@
 						require="True"
 					>
 					</custom-fieldset>
+					<input
+					class="btn"
+					id="button"
+					type="button"
+					value="Verificar"
+					onclick="verificar()"
+				/>
 				</div>
+				
 			</form>
 
 			<div class="btns">
-				<div id="res">Esperando por dados...</div>
 				<div class="buttonform">
-					<input
-						class="btn"
-						id="button"
-						type="button"
-						value="Verificar"
-						onclick="verificar()"
-					/>
+					
 					<input
 						class="btn"
 						id="cardbtn"
@@ -93,6 +98,7 @@
 			</div>
 		</section>
 
+		<!--
 		<div id="card" class="card" background-image="/assets/bkcard.png">
 			<div class="top">
 				<h2>Access Card</h2>
@@ -119,12 +125,14 @@
 				</div>
 			</div>
 		</div>
+	-->
 		<custom-footer
 			href="https://github.com/Alljuly"
 			content="Alljuly"
 		></custom-footer>
+
 		<script src="./src/components/header/Header.js"></script>
-		<script src="./src/components/form_elements/fieldset/FormFields.js"></script>
+		<script src="./src/components/form_elements/fieldset/Fieldset.js"></script>
 		<script src="./src/components/footer/Footer.js"></script>
 		<script src="script.js"></script>
 	</body>
